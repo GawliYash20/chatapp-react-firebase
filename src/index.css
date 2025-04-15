@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+
+body {
+  background-image: url("/bg.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+}
+
+.container {
+  width: 90vw;
+  height: 90vh;
+  background-color: rgba(17, 25, 40, 0.75);
+  backdrop-filter: blur(19px) saturate(180%);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  display: flex;
+}
+
+/* width of the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* track backgreound */
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+
+/* Thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+  border: 3px solid #1e1e1e;
+}
+
+/* on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
