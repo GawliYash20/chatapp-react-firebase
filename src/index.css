@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  width: 90vw;
+  width: 80vw;
   height: 90vh;
   background-color: rgba(17, 25, 40, 0.75);
   backdrop-filter: blur(19px) saturate(180%);
@@ -33,15 +33,14 @@ body {
 
 /* track backgreound */
 ::-webkit-scrollbar-track {
-  background: #1e1e1e;
+  background: transparent;
 }
 
 
 /* Thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-  background-color: #888;
+  background-color: #1e1e1e;
   border-radius: 6px;
-  border: 3px solid #1e1e1e;
 }
 
 /* on hover */
