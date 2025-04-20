@@ -110,10 +110,22 @@ const Chat = () => {
       <div className="center">
         {chat?.messages?.map((message, index) => (
           <div
-            className={message.senderId === currentUser.id ? "message own": "messages"}
+            className={
+              message.senderId === currentUser.id ? "message own" : "messages"
+            }
             key={message?.createdAt?.seconds || index}
           >
-            <img src="./avatar.png" alt="" />
+            <img
+              src="./avatar.png"
+              alt=""
+              style={{
+                width: "30px",
+                height: "30px",
+                borderRadius: "50%",
+                objectFit: "cover",
+              }}
+            />
+
             <div className="texts">
               {message.img && <img src={message.img} alt="" />}
               <p>{message.text}</p>

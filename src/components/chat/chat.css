@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #dddddd35;
+
     .user {
       display: flex;
       align-items: center;
@@ -28,6 +29,7 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
+
         span {
           font-size: 18px;
           font-weight: bold;
@@ -52,13 +54,22 @@
     }
   }
 
-  .center{
+  .center {
     padding: 20px;
     flex: 1;
-    overflow: hidden scroll;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    .message > img {
+      width: 30px !important;
+      height: 30px !important;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0; /* prevents growing or shrinking */
+    }
+    
 
     .message {
       max-width: 70%;
@@ -69,26 +80,32 @@
         align-self: flex-end;
 
         .texts {
-          p{
+          p {
             background-color: #5183fe;
           }
         }
       }
 
       img {
-        width: 30px;
-        height: 30px;
+        width: 30px !important;
+        height: 30px !important;
         border-radius: 50%;
         object-fit: cover;
       }
-
       .texts {
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 5px;
 
-        p{
+        img {
+          width: 100%;
+          height: 300px;
+          border-radius: 10px;
+          object-fit: cover;
+        }
+
+        p {
           padding: 20px;
           background-color: rgba(17, 25, 40, 0.3);
           border-radius: 10px;
@@ -97,16 +114,10 @@
         span {
           font-size: 13px;
         }
-
-        img {
-          width: 100%;
-          height: 300px;
-          border-radius: 10px;
-          object-fit: cover;
-        }
       }
     }
   }
+
   .bottom {
     padding: 20px;
     display: flex;
@@ -117,25 +128,29 @@
     margin-top: auto;
 
     .icons {
-        display: flex;
-        gap: 20px;
-
+      display: flex;
+      gap: 20px;
     }
+
     img {
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
     }
 
     input {
-        flex: 1;
-        background-color: rgba(17, 25, 40, 0.5);
-        border: none;
-        outline: none;
-        color: white;
-        padding: 20px;
-        border-radius: 10px;
-        font-size: 16px;
+      flex: 1;
+      background-color: rgba(17, 25, 40, 0.5);
+      border: none;
+      outline: none;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 16px;
+
+      &:disabled {
+        cursor: not-allowed;
+      }
     }
 
     .emoji {
@@ -147,13 +162,19 @@
         left: 0;
       }
     }
+
     .sendButton {
-        background-color: #5183fe;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+      background-color: #5183fe;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:disabled {
+        background-color: #5182feb4;
+        cursor: not-allowed;
+      }
     }
   }
 }
